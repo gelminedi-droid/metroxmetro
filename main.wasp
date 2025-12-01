@@ -15,20 +15,20 @@ app saasApp {
           email: "hello@example.com"
         },
         userSignupFields: import { userSignupFields } from "@src/auth/email/userSignupFields",
-        emailVerification: {
-          clientRoute: EmailVerificationRoute,
-        },
-        passwordReset: {
-          clientRoute: PasswordResetRoute,
-        }
+        // emailVerification: {
+        //   clientRoute: EmailVerificationRoute,
+        // },
+        // passwordReset: {
+        //   clientRoute: PasswordResetRoute,
+        // }
       },
     },
     onAuthSucceededRedirectTo: "/",
     onAuthFailedRedirectTo: "/login",
   },
-  emailSender: {
-    provider: Dummy,
-  },
+  // emailSender: {
+  //   provider: Dummy,
+  // },
   client: {
     rootComponent: import { App } from "@src/App",
   }
