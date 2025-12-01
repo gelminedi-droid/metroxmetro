@@ -1,6 +1,9 @@
 # Use Node.js 18 as the base image
 FROM node:18-slim AS builder
 
+# Install system dependencies required for Wasp and Prisma
+RUN apt-get update && apt-get install -y curl openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+
 # Install Wasp
 RUN curl -sSL https://get.wasp.sh/installer.sh | sh
 
