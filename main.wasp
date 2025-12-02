@@ -15,20 +15,24 @@ app saasApp {
           email: "hello@example.com"
         },
         userSignupFields: import { userSignupFields } from "@src/auth/email/userSignupFields",
-        // emailVerification: {
-        //   clientRoute: EmailVerificationRoute,
-        // },
-        // passwordReset: {
-        //   clientRoute: PasswordResetRoute,
-        // }
+        emailVerification: {
+          clientRoute: EmailVerificationRoute,
+        },
+        passwordReset: {
+          clientRoute: PasswordResetRoute,
+        }
       },
     },
     onAuthSucceededRedirectTo: "/",
     onAuthFailedRedirectTo: "/login",
   },
-  // emailSender: {
-  //   provider: Dummy,
-  // },
+  emailSender: {
+    provider: SMTP,
+    defaultFrom: {
+      name: "Open SaaS App",
+      email: "noreply@example.com"
+    },
+  },
   client: {
     rootComponent: import { App } from "@src/App",
   }
