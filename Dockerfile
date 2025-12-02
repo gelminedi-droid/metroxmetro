@@ -1,5 +1,5 @@
-# Use Node.js 18 as the base image
-FROM node:18-slim AS builder
+# Use Node.js 22 as the base image
+FROM node:22-slim AS builder
 
 # Install system dependencies required for Wasp and Prisma
 RUN apt-get update && apt-get install -y curl openssl ca-certificates && rm -rf /var/lib/apt/lists/*
@@ -20,7 +20,7 @@ RUN /root/.local/bin/wasp build
 # ---------------------------------------------------------
 # Production Image
 # ---------------------------------------------------------
-FROM node:18-slim
+FROM node:22-slim
 
 WORKDIR /app
 
