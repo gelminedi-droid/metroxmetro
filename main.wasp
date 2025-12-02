@@ -36,9 +36,6 @@ app saasApp {
   client: {
     rootComponent: import { App } from "@src/App",
   },
-  db: {
-    system: PostgreSQL,
-  },
 }
 
 // #region Auth
