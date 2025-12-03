@@ -19,6 +19,7 @@ RUN /root/.local/bin/wasp build
 
 # Build the server bundle (required for production)
 WORKDIR /app/.wasp/build/server
+RUN npm install zod
 RUN npm install
 RUN npm run bundle
 
