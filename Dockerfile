@@ -23,6 +23,7 @@ RUN npm install zod
 RUN npm install @prisma/client@5.19.1
 RUN npm install lucia@3.2.0
 RUN npm install @lucia-auth/adapter-prisma@4.0.1
+RUN npm install nodemailer@6.9.9
 RUN npm install
 RUN npm run bundle
 
