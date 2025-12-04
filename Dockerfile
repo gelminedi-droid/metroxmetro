@@ -22,6 +22,7 @@ WORKDIR /app/.wasp/build/server
 RUN npm install zod
 RUN npm install @prisma/client
 RUN npm install lucia
+RUN npm install @lucia-auth/adapter-prisma
 RUN npm install
 RUN npm run bundle
 

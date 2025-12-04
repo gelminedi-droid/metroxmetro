@@ -14,7 +14,8 @@
     "wasp": "file:.wasp/out/sdk/wasp",
     "zod": "^3.22.4",
     "@prisma/client": "5.19.1",
-    "lucia": "^3.2.0"
+    "lucia": "^3.2.0",
+    "@lucia-auth/adapter-prisma": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
