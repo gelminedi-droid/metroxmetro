@@ -43,7 +43,7 @@ COPY --from=builder /app/.wasp/build/web-app /app/web-app
 # Install production dependencies for server
 WORKDIR /app/server
 RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
-COPY --from=builder /app/schema.prisma ./db/schema.prisma
+COPY --from=builder /app/.wasp/build/db/schema.prisma ./db/schema.prisma
 RUN npm install --omit=dev
 RUN npx prisma@5.19.1 generate --schema=./db/schema.prisma
 

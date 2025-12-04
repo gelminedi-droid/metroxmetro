@@ -40,22 +40,3 @@ model Tag {
 
   tasks Task[]
 }
-
-model AuthIdentity {
-  providerName String
-  providerUserId String
-  providerData String @default("{}")
-  userId String
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@id([providerName, providerUserId])
-}
-
-model Session {
-  id String @id @unique
-  expiresAt DateTime
-  userId String
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-}
