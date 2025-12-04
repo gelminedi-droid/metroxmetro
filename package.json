@@ -16,7 +16,8 @@
     "@prisma/client": "5.19.1",
     "lucia": "^3.2.0",
     "@lucia-auth/adapter-prisma": "^4.0.1",
-    "nodemailer": "^6.9.9"
+    "nodemailer": "^6.9.9",
+    "prisma": "5.19.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",

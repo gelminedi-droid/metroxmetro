@@ -42,6 +42,7 @@ COPY --from=builder /app/.wasp/build/web-app /app/web-app
 # Install production dependencies for server
 WORKDIR /app/server
 RUN npm install --omit=dev
+RUN npx prisma generate
 
 # Expose port
 EXPOSE 3001
