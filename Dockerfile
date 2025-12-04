@@ -45,7 +45,7 @@ WORKDIR /app/server
 RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /app/schema.prisma ./db/schema.prisma
 RUN npm install --omit=dev
-RUN npx prisma generate --schema=./db/schema.prisma
+RUN npx prisma@5.19.1 generate --schema=./db/schema.prisma
 
 # Expose port
 EXPOSE 3001
