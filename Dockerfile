@@ -51,4 +51,4 @@ RUN npx prisma@5.19.1 generate --schema=./db/schema.prisma
 EXPOSE 3001
 
 # Start server
-CMD sh -c "npx prisma migrate deploy --schema=./db/schema.prisma && npm start"
+CMD sh -c "npx prisma@5.19.1 migrate deploy --schema=./db/schema.prisma && npm start"
